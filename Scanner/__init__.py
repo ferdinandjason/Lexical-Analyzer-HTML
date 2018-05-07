@@ -92,7 +92,7 @@ class TokenBuilder:
 			self.tokens.append(Token(self.idx,'== CLOSING TAG ==',TokenType.ELEMENT))
 		if tipe == 'comment_close' and results != [] :
 			self.tokens.append(Token(self.idx,'== COMMENT CLOSE ==',TokenType.ELEMENT))
-		if tipe == 'document_type':
+		if tipe == 'document_type' and results != [] :
 			self.tokens.append(Token(self.idx,'== DOCUMENT TYPE ==',TokenType.ELEMENT))
 		for result in results:
 			if result == None : return
